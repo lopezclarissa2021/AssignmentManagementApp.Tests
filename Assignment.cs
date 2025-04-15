@@ -8,14 +8,22 @@ namespace AssignmentManagementApp.Tests
 {
     public class Assignment
     {
-        public string Title { get; private set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public bool IsCompleted { get; set; }
+        public DateTime DueDate { get; set; }
 
-        public Assignment(string title = "New Assignment")
+        public Assignment(string title, string description, DateTime dueDate)
         {
-            if (string.IsNullOrWhiteSpace(title))
-                throw new ArgumentException("Title cannot be null or empty.", nameof(title));
-
             Title = title;
+            Description = description;
+            DueDate = dueDate;
+            IsCompleted = false;
+        }
+
+        public Assignment()
+        {
         }
     }
 }
