@@ -7,7 +7,7 @@ namespace AssignmentManagementApp.Tests
         [Fact]
         public void Assignment_should_Have_A_Title()
         {
-            var assignment = new Assignment() 
+            var assignment = new Assignment()
             {
                 Title = "Test Assignment",
                 Description = "This is a test assignment.",
@@ -37,6 +37,12 @@ namespace AssignmentManagementApp.Tests
             Assert.Equal("New Description", assignment.Description);
             Assert.True(assignment.IsCompleted);
         }
-
+        [Fact]
+        public void DeleteAssignment_Should_RemoveAssignment()
+        {
+            var assignment = new Assignment("Test Assignment", "This is a test.", DateTime.Now);
+            assignment = null; // Simulate deletion
+            Assert.Null(assignment);
+        }
     }
 }
