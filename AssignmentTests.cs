@@ -37,5 +37,6 @@ namespace AssignmentManagementApp.Tests
             Assert.Equal("New Description", assignment.Description);
             Assert.True(assignment.IsCompleted);
         }
+
     }
 }
