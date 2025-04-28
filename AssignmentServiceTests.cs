@@ -15,6 +15,7 @@ namespace AssignmentManagementApp.Tests
         public void AddAssignment_ValidAssignment_AddSuccessfully()
         {
             // Arrange
+
             var service = new AssignmentService();
             var assignment = new Assignment("Test Assignment", "Test Description", DateTime.Now.AddDays(7));
             // Act
